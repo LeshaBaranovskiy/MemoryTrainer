@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/FirstPlayerImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:contentDescription="@string/firstplayerflag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/first_player_score" />
+
+    <ImageView
+        android:id="@+id/SecondPlayerImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/second_player_score"
+        android:contentDescription="@string/secondplayerflag" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="110dp"
+        android:columnCount="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewCard1"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"
+            android:onClick="cardFlip"/>
+
+        <TextView
+            android:id="@+id/textViewCard2"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard3"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard4"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard5"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard6"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard7"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard8"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard9"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard10"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard11"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard12"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard13"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard14"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard15"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+        <TextView
+            android:id="@+id/textViewCard16"
+            style="@style/CardStyle"
+            android:background="@drawable/shape_cards"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewFirstPlayerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_score"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/FirstPlayerImageView"
+        app:layout_constraintEnd_toEndOf="@+id/FirstPlayerImageView"
+        app:layout_constraintStart_toStartOf="@+id/FirstPlayerImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSecondPlayerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_score"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/SecondPlayerImageView"
+        app:layout_constraintEnd_toEndOf="@+id/SecondPlayerImageView"
+        app:layout_constraintStart_toStartOf="@+id/SecondPlayerImageView"
+        app:layout_constraintTop_toTopOf="@+id/SecondPlayerImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
