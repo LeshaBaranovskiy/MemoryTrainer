@@ -1,11 +1,14 @@
 package com.example.memorytrainer;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -14,6 +17,8 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -26,8 +31,11 @@ public class MainActivity extends AppCompatActivity {
     private ObjectAnimator oa1;
     private ObjectAnimator oa2;
 
+    private LottieAnimationView lottieAnimationViewCongratulation;
+
     private TextView currentFlippedCard;
     private TextView firstFlippedCard;
+
     private TextView firstPlayerScoreTextView;
     private TextView secondPlayerScoreTextView;
 
@@ -43,11 +51,10 @@ public class MainActivity extends AppCompatActivity {
     private int firstPlayerScore = 0;
     private int secondPlayerScore = 0;
     private int cardsFlipped = 0;
+    private int pairsFlipped = 0;
 
     private String firstCardImageName = "";
     private String secondCardImageName = "";
-
-    private boolean chooseCorrect = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         secondPlayerScoreTextView = findViewById(R.id.textViewSecondPlayerScore);
         imageViewFirstPlayerScore = findViewById(R.id.FirstPlayerImageView);
         imageViewSecondPlayerScore = findViewById(R.id.SecondPlayerImageView);
+
+        lottieAnimationViewCongratulation = findViewById(R.id.congratulation_animation);
 
         //Заносим все textView в массив
         for (int i = 1; i <= 16; i++) {
@@ -162,6 +171,11 @@ public class MainActivity extends AppCompatActivity {
                 firstPlayerScore++;
                 firstPlayerScoreTextView.setText(String.format("%s", firstPlayerScore));
             }
+            pairsFlipped++;
+
+            if (pairsFlipped == textViews.size()/2) {
+                gameEnd();
+            }
         } else if (cardsFlipped == 2) {
 
             turn++;
@@ -241,6 +255,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Анимация движения флажков сверху в зависимости от того, чей сейчас ход
     private void turnAnimation(int turn) {
 
         ObjectAnimator imageFirst = ObjectAnimator.ofFloat(imageViewFirstPlayerScore, "translationY", 0f);
@@ -286,4 +301,35 @@ public class MainActivity extends AppCompatActivity {
             textSecond.start();
         }
     }
+
+    //Диалогое окно окончания игры
+    private void gameEnd() {
+
+        lottieAnimationViewCongratulation.playAnimation();
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+
+        if (firstPlayerScore > secondPlayerScore) {
+            alertDialog.setMessage("BLUE WINS!");
+        } else if (secondPlayerScore > firstPlayerScore) {
+            alertDialog.setMessage("RED WINS!");
+        } else {
+            alertDialog.setMessage("DRAW!");
+        }
+
+        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(MainActivity.this, StartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        alertDialog.setTitle("GAME OVER!");
+        alertDialog.show();
+    }
 }
+
+
+
+
