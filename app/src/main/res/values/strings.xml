@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">MemoryTrainer</string>
+    <string name="app_name">Найди пару</string>
     <string name="firstplayerflag">firstPlayerFlag</string>
     <string name="secondplayerflag">secondPlayerFlag</string>
-    <string name="start_game">Start game</string>
+    <string name="start_game">Начать игру</string>
 </resources>

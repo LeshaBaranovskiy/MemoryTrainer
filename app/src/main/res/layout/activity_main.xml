@@ -12,9 +12,9 @@
         android:id="@+id/FirstPlayerImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="50dp"
         android:contentDescription="@string/firstplayerflag"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline05v"
+        app:layout_constraintStart_toStartOf="@+id/guideline005v"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/first_player_score" />
 
@@ -22,104 +22,156 @@
         android:id="@+id/SecondPlayerImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/secondplayerflag"
+        app:layout_constraintEnd_toStartOf="@+id/guideline095v"
+        app:layout_constraintStart_toStartOf="@+id/guideline05v"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/second_player_score"
-        android:contentDescription="@string/secondplayerflag" />
+        app:srcCompat="@drawable/second_player_score" />
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="110dp"
-        android:columnCount="4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <TextView
+        android:id="@+id/textViewCard1"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        android:onClick="cardFlip"
+        app:layout_constraintBottom_toTopOf="@+id/guideline04h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0275v"
+        app:layout_constraintStart_toStartOf="@+id/guideline005v"
+        app:layout_constraintTop_toTopOf="@+id/guideline02h" />
 
+    <TextView
+        android:id="@+id/textViewCard2"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline04h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline05v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0275v"
+        app:layout_constraintTop_toTopOf="@+id/guideline02h" />
 
-        <TextView
-            android:id="@+id/textViewCard1"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"
-            android:onClick="cardFlip"/>
+    <TextView
+        android:id="@+id/textViewCard3"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline04h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0725v"
+        app:layout_constraintStart_toStartOf="@+id/guideline05v"
+        app:layout_constraintTop_toTopOf="@+id/guideline02h" />
 
-        <TextView
-            android:id="@+id/textViewCard2"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard4"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline06h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0275v"
+        app:layout_constraintStart_toStartOf="@+id/guideline005v"
+        app:layout_constraintTop_toTopOf="@+id/guideline04h" />
 
-        <TextView
-            android:id="@+id/textViewCard3"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard5"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline06h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline05v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0275v"
+        app:layout_constraintTop_toTopOf="@+id/guideline04h" />
 
-        <TextView
-            android:id="@+id/textViewCard4"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard6"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline06h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0725v"
+        app:layout_constraintStart_toStartOf="@+id/guideline05v"
+        app:layout_constraintTop_toTopOf="@+id/guideline04h" />
 
-        <TextView
-            android:id="@+id/textViewCard5"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard7"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline06h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline095v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0725v"
+        app:layout_constraintTop_toTopOf="@+id/guideline04h" />
 
-        <TextView
-            android:id="@+id/textViewCard6"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard8"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline08h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0275v"
+        app:layout_constraintStart_toStartOf="@+id/guideline005v"
+        app:layout_constraintTop_toTopOf="@+id/guideline06h" />
 
-        <TextView
-            android:id="@+id/textViewCard7"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard9"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline08h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline05v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0275v"
+        app:layout_constraintTop_toTopOf="@+id/guideline06h" />
 
-        <TextView
-            android:id="@+id/textViewCard8"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard10"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline08h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0725v"
+        app:layout_constraintStart_toStartOf="@+id/guideline05v"
+        app:layout_constraintTop_toTopOf="@+id/guideline06h" />
 
-        <TextView
-            android:id="@+id/textViewCard9"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard11"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline08h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline095v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0725v"
+        app:layout_constraintTop_toTopOf="@+id/guideline06h" />
 
-        <TextView
-            android:id="@+id/textViewCard10"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard12"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0275v"
+        app:layout_constraintStart_toStartOf="@+id/guideline005v"
+        app:layout_constraintTop_toTopOf="@+id/guideline08h" />
 
-        <TextView
-            android:id="@+id/textViewCard11"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard13"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline05v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0275v"
+        app:layout_constraintTop_toTopOf="@+id/guideline08h" />
 
-        <TextView
-            android:id="@+id/textViewCard12"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard14"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0725v"
+        app:layout_constraintStart_toStartOf="@+id/guideline05v"
+        app:layout_constraintTop_toTopOf="@+id/guideline08h" />
 
-        <TextView
-            android:id="@+id/textViewCard13"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
+    <TextView
+        android:id="@+id/textViewCard15"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline095v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0725v"
+        app:layout_constraintTop_toTopOf="@+id/guideline08h" />
 
-        <TextView
-            android:id="@+id/textViewCard14"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
-
-        <TextView
-            android:id="@+id/textViewCard15"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
-
-        <TextView
-            android:id="@+id/textViewCard16"
-            style="@style/CardStyle"
-            android:background="@drawable/shape_cards"/>
-
-    </GridLayout>
+    <TextView
+        android:id="@+id/textViewCard16"
+        style="@style/CardStyle"
+        android:background="@drawable/shape_cards"
+        app:layout_constraintBottom_toTopOf="@+id/guideline04h"
+        app:layout_constraintEnd_toStartOf="@+id/guideline095v"
+        app:layout_constraintStart_toStartOf="@+id/guideline0725v"
+        app:layout_constraintTop_toTopOf="@+id/guideline02h" />
 
     <TextView
         android:id="@+id/textViewFirstPlayerScore"
@@ -156,6 +208,69 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/fireworks" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline005v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline02h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline04h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline06h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline08h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline0275v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.275" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline05v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline0725v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.725" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline095v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

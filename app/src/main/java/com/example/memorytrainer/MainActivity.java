@@ -310,11 +310,11 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
 
         if (firstPlayerScore > secondPlayerScore) {
-            alertDialog.setMessage("BLUE WINS!");
+            alertDialog.setMessage("Синие победили!");
         } else if (secondPlayerScore > firstPlayerScore) {
-            alertDialog.setMessage("RED WINS!");
+            alertDialog.setMessage("Красные победили!");
         } else {
-            alertDialog.setMessage("DRAW!");
+            alertDialog.setMessage("Ничья!");
         }
 
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -325,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        alertDialog.setTitle("GAME OVER!");
+        alertDialog.setTitle("Игра окончена!");
         alertDialog.show();
     }
 }
